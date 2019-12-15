@@ -38,3 +38,5 @@ print('''git checkout featureA
     git push -u origin featureA
     load the feature branch into gitHub
     after the command push alone is enough''')
+print('''git pull
+    download the updates from gitHub into local''')
