@@ -17,3 +17,13 @@ print('''git status
     shows the status of the files''')
 print('''git commit -m 'comment'
       marks all the added files and changes''')
+
+# Branches
+print('''git branch -a
+    shows all branches''')
+print('''git branch newBranch
+    create a new branch''')
+print('''git branch newBranch
+    create a new branch''')
+print('''git checkout newBranch
+    moves the source control on the newBranch''')
