@@ -1,3 +1,2 @@
-**LearningGit**
-
-Basic tutorial to learn gitHub
+# LearningGit
+Basic tutorial on git and gitHub functionalities

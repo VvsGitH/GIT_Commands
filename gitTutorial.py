@@ -27,3 +27,9 @@ print('''git branch newBranch
     create a new branch''')
 print('''git checkout newBranch
     moves the source control on the newBranch''')
+
+# Push to gitHub
+print('''git remote add origin https://github.com/VvsGitH/LearningGit.git
+    shows all branches''')
+print('''git git push -u origin master
+    load on gitHub''')
