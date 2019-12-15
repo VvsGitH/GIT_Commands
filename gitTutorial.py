@@ -30,6 +30,11 @@ print('''git checkout newBranch
 
 # Push to gitHub
 print('''git remote add origin https://github.com/VvsGitH/LearningGit.git
-    shows all branches''')
-print('''git git push -u origin master
-    load on gitHub''')
+    associates the folder with a pre-create empty repository on gitHub''')
+print('''git push -u origin master
+    load the master branch into gitHub
+    after the command push alone is enough''')
+print('''git checkout featureA
+    git push -u origin featureA
+    load the feature branch into gitHub
+    after the command push alone is enough''')
