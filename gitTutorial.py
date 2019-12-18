@@ -29,6 +29,7 @@ print('''git checkout newBranch
     moves the source control on the newBranch''')
 
 # Push to gitHub
+# Create a new empty repository on gitHub and copy the link
 print('''git remote add origin https://github.com/VvsGitH/LearningGit.git
     associates the folder with a pre-create empty repository on gitHub''')
 print('''git push -u origin master
@@ -40,3 +41,9 @@ print('''git checkout featureA
     after the command push alone is enough''')
 print('''git pull
     download the updates from gitHub into local''')
+
+# Change Repository Name
+# NB: Local folder name doesn't influence git synchronization
+# Rename repository on gitHub, then copy the new link
+print('''git remote set-url origin "new_url"
+    associates the folder with the renamed repository on gitHub''')
