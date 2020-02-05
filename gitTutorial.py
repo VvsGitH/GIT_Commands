@@ -17,6 +17,8 @@ print('''git status
     shows the status of the files''')
 print('''git commit -m 'comment'
       marks all the added files and changes''')
+print('''git reset --hard
+      reset the file to the last commit''')
 
 # Branches
 print('''git branch -a
@@ -27,6 +29,9 @@ print('''git branch newBranch
     create a new branch''')
 print('''git checkout newBranch
     moves the source control on the newBranch''')
+# Branches - short version
+print('''git checkout -b newBranch
+    create newBranch and moves the source control on it''')
 
 # Push to gitHub
 # Create a new empty repository on gitHub and copy the link
