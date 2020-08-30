@@ -10,18 +10,22 @@ List of all the main git commands
 - echo '# Project Name' >> README.md
 
 ## **Managing files**
-- touch *new_file*
-- touch .gitignore -> this file contains the name of the files ignored by git'''
 - mkdir *new_dir*
+- touch *new_file*
+- touch .gitignore -> this file contains the name of the files ignored by git
   
-## **Commit procedure**
-1. git status -> show which files are created/changed/deleted/renamed from the previous commit
-2. git add *file_name* -> add file_name to the list of the files to commit
-2. git add . -> add all folder files to the list of to commit files
-2. git rm --cached *file_name* -> remove file from the list
-2. git rm -r --cached . -> remove all folder files from the list
-3. git commit -m 'comment'
-### Resetting
+## **Version Control**
+- git status -> show which files are created/changed/deleted/renamed from the previous commit
+- git log -> show the history of the comits
+### Comit Procedure
+- git add *file_name* -> add file_name to the list of the files to commit (staging area)
+- git add . -> add all folder files to the list of to commit files
+- git commit -m 'comment'
+### Removing files from comit
+- git reset *file_name* -> remove the file from the staging
+- git rm --cached *file_name* -> remove file from the git index
+### Restoring to the last comit
+- git restore *file_name* -> bring the file version to the last commit
 - git reset --hard -> reset the folder to the last commit
 
 ## **Branches**
