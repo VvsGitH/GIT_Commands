@@ -15,8 +15,9 @@ List of all the main git commands
 - git diff -> show the differences in all modified files in respect to the last commit
 ### Commit Procedure
 - git add *file_path* -> add file_name to the list of the files to commit (staging area)
-- git add . -> add all folder files to the list of to commit files
-- git commit -m 'comment'
+- git add . -> add all folder files to the stagig area
+- git commit -m 'comment' -> save the version of all the files in the stagin area
+- git commit -a -m 'comment' -> add all files to the staging area and save their version
 ### Removing files from staging area
 - git reset *file_path* -> remove the file from the staging area
 - git reset -> remove all files from the staging area
