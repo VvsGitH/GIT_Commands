@@ -12,17 +12,21 @@ List of all the main git commands
 ## **Version Control**
 - git status -> show which files are created/changed/deleted/renamed from the previous commit
 - git log -> show the history of the comits
-### Comit Procedure
+- git diff -> show the differences in all modified files in respect to the last commit
+### Commit Procedure
 - git add *file_path* -> add file_name to the list of the files to commit (staging area)
 - git add . -> add all folder files to the list of to commit files
 - git commit -m 'comment'
-### Removing files from comit
+### Removing files from commit
 - git reset *file_path* -> remove the file from the staging
 - git rm --cached *file_path* -> remove file from the git index
-### Restoring to the last comit
-- git checkout -- *file_path*
+### Restoring to the last commit
 - git restore *file_name* -> bring the file version to the last commit
-- git reset --hard -> reset the folder to the last commit
+- git checkout -- *file_path*
+- git reset --hard -> reset the entire repository to the last commit
+### Restoring to a particular commit
+- git checkout *commit_hash* -- *file_path*
+- git reset --hard *commit_hash* -> reset the entire repository
 
 ## **Branches**
 - git branch -a -> shows all branches
