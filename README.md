@@ -18,11 +18,15 @@ List of all the main git commands
 - git add . -> add all folder files to the stagig area
 - git commit -m 'comment' -> save the version of all the files in the stagin area
 - git commit -a -m 'comment' -> add all files to the staging area and save their version
+- git commit --amend -> modify the last commit: use to add/remove changes or to change the commit message 
 ### Removing files from staging area
+- git restore --staged *file_path* -> remove the file from the staging area
 - git reset *file_path* -> remove the file from the staging area
+- git restore --staged . -> remove all files from the staging area
 - git reset -> remove all files from the staging area
 ### Restoring to the last commit
-- git restore *file_name* -> bring the file version to the last commit
+- git restore *file_path* -> bring the file version to the last commit
+- git restore . -> restore all folder to the last commit
 - git checkout -- *file_path*
 - git reset --hard -> reset all files to the last commit
 ### Restoring to a particular commit
