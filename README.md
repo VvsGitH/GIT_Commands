@@ -46,6 +46,19 @@ List of all the main git commands
 - git branch -d *branch_name* -> delete local *branch_name* only if it was previously merged to master
 - git branch -D *branch_name* -> delete local *branch_name* even if it wasn't merged to master
 
+## **REMOTES**
+- git remote -v -> shows remote servers
+- git remote show *remote_name* -> gives details about the remote
+### Adding, renaming and removing a remote
+- git remote add *remote_name* *remote_link*
+- git remote rename *old_name* *new_name*
+- gir remote remove *remote_name*
+### Push/Pull
+- git fetch *remote_name* -> retrieve the latest metadata from the remote
+- git pull *remote_name* -> pull changes from the remote
+- git push *remote_name* *branch_name* -> push your branch to the remote
+- git push origin -d *branch_name* -> delete the branch on the remote
+
 ## **GitHUB**
 ### Load a new local repository on gitHub
 1. Create a new empty repository on gitHub and copy the link
@@ -54,13 +67,5 @@ List of all the main git commands
 4. git push -u origin *feature_branch* -> load the feature branch into gitHub (only the 1st time)
 ### Clone a cloud repository on local
 - git clone *repository_link*
-### Push/Pull
-- git pull -> pull from gitHub
-- git push -> push your current branch to gitHub
-- git push origin -d *branch_name* -> delete the *branch_name* on gitHub
-
-## **Change repository name**
-### Change local repository name
-- Local folder name doesn't influence git synchronization
-### Rename repository on gitHub, then copy the new link
+### Rename repository on gitHub
 - git remote set-url origin *new_url* -> associates the folder with the renamed repository on gitHub
