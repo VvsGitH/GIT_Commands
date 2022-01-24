@@ -38,7 +38,7 @@ List of all the main git commands
 - git restore --source *commit_hash* *file_path* -> put the old version of the file in the working area
 - git reset *commit_hash* *file_path* -> put the old version of the file in the staging area and the current version in the working area.
 ### Revert the repo back to the state it was previous to a particular commit
-- git revert *commit_hash* -> put the repo in the the state it was previous to the selected commit and make a new commit
+- git revert *commit_hash* -> make a new commit which put the repo in the state it was previous to the selected commit
 
 ## **Branches**
 - git branch -a -> shows all branches
