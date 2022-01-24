@@ -12,6 +12,7 @@ List of all the main git commands
 ## **Version Control**
 - git status -> show which files are created/changed/deleted/renamed from the previous commit
 - git log -> show the history of the comits
+- git log --oneline --graph -> prettier log
 - git diff -> show the differences in all files in the working area since the last commit
 - git diff --staged -> show the differences in all files in the staging area since the last commit
 ### Commit Procedure
@@ -36,6 +37,8 @@ List of all the main git commands
 ### Restoring one file to a particular commit
 - git restore --source *commit_hash* *file_path* -> put the old version of the file in the working area
 - git reset *commit_hash* *file_path* -> put the old version of the file in the staging area and the current version in the working area.
+### Revert the repo back to the state it was previous to a particular commit
+- git revert *commit_hash* -> put the repo in the the state it was previous to the selected commit and make a new commit
 
 ## **Branches**
 - git branch -a -> shows all branches
@@ -49,6 +52,12 @@ List of all the main git commands
 ### Deleting a branch
 - git branch -d *branch_name* -> delete local *branch_name* only if it was previously merged to master
 - git branch -D *branch_name* -> delete local *branch_name* even if it wasn't merged to master
+
+## **STASH**
+- git stash save *stash_name* -> take the uncommitted changes and put them apart in a stash 
+- git stash list -> show the list of your stashes
+- git stash apply *stash_name* -> bring back to the workspace the changes in a particular stash
+- git stash pop -> bring back to the workspace the changes in the last stash
 
 ## **REMOTES**
 - git remote -v -> shows remote servers
