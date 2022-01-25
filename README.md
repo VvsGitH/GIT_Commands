@@ -46,20 +46,34 @@ List of all the main git commands
 ### Creating a new branch
 - git branch *newBranch* -> create a new branch called *newBranch*
 - git checkout -b *newBranch* -> create *newBranch* and moves the source control on it
-### Merging procedure
-1. git checkout *branchToUpdate* -> move the source control on the brach to update
-2. git merge *branchToMerge* -> update branchToUpdate with branchToMerge
 ### Deleting a branch
 - git branch -d *branch_name* -> delete local *branch_name* only if it was previously merged to master
 - git branch -D *branch_name* -> delete local *branch_name* even if it wasn't merged to master
+### Merging procedure
+1. git checkout *branchToUpdate* -> move the source control on the brach to update
+2. git merge *branchToMerge* -> update branchToUpdate with branchToMerge
+### Rebasing the branch before merge
+1. git checkout *branch_name*
+2. git log --oneline -> find the hash of the commit this branch split from
+3. git rebase *splitCommitHash* --interactive -> start the rebase procedure
+4. It will appear a list of all your branch related commits: you can choose to either
+    - pick: this commit will remain a separate commit
+    - squash: this commit will be incorporated in the previous commit; its message will be appended
+    - fixup: this commit will be incorporated in the previous commit; its message will be lost
+5. After the rebase the branch history is reduced based on your choices
+### Rebasing the branch on top of master
+1. git checkout *branch_name*
+2. git rebase master --interactive
+3. Now you can pick/squash commits as before, but it is usually unnecessary
+4. After the rebase the branch history is rewritten
 
-## **STASH**
-- git stash save *stash_name* -> take the uncommitted changes and put them apart in a stash 
+## **Stash**
+- git stash save *stash_name* -> take the uncommitted changes and put them aside in a stash 
 - git stash list -> show the list of your stashes
 - git stash apply *stash_name* -> bring back to the workspace the changes in a particular stash
 - git stash pop -> bring back to the workspace the changes in the last stash
 
-## **REMOTES**
+## **Remotes**
 - git remote -v -> shows remote servers
 - git remote show *remote_name* -> gives details about the remote
 ### Adding, renaming and removing a remote
